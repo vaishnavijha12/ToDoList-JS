@@ -5,27 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List JS</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-  
     <div class="container">
         <div class="todo-app">
-<h2>To-Do-List Application <img src="images/note.png" alt="notes"></h2>
+            <h2>To-Do-List Application 
+                <img src="images/note.png" alt="notes">
+            </h2>
 
-
-              <div class="row">
+            <div class="row">
                 <input type="text" id="input-box" placeholder="Enter Your Text Here">
                 <button onclick="addTask()">ADD</button>
-              </div>
-              <ul id="list-container">
-                <li class="checked">Task 1</li>
-                <li class="checked">Task 2</li>
-              </ul>
+            </div>
+
+            <!-- ✅ Added <span> ❌ for default tasks -->
+            <ul id="list-container">
+                <li class="checked">Task 1 <span>&#x00d7;</span></li>
+                <li class="checked">Task 2 <span>&#x00d7;</span></li>
+            </ul>
         </div>
-
     </div>
-
 
     <script src="script.js"></script>
 </body>

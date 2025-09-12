@@ -1,65 +1,129 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-
 }
-.container{
+
+.container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(185deg,#353671,#0f4417);
+    background: linear-gradient(185deg, #353671, #0f4417);
     padding: 10px;
-    
-
 }
-.todo-app{
-   
+
+.todo-app {
     max-width: 545px;
     background-color: #fff;
     margin: 100px auto;
     padding: 40px 30px 70px;
-    border-radius: 5px;
-
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease-in-out;
 }
-.todo-app h2{
+
+.todo-app h2 {
     color: #002765;
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-
 }
-.todo-app h2 img{
+
+.todo-app h2 img {
     width: 35px;
     margin-left: 10px;
-
-}
-.todo-app:hover{
-    box-shadow: 8px 8px 8px 8px black;
 }
 
-.row{
+.todo-app:hover {
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #efe2ef;
     border-radius: 10px;
-    padding-left:20px ;
+    padding-left: 20px;
     margin-bottom: 25px;
-
 }
-input{
+
+input {
     flex: 1;
     border: none;
     outline: none;
     background: transparent;
     padding: 10px;
-    font-weight: 14px;
-
+    font-size: 14px;
 }
-button{
+
+button {
     border: none;
     outline: none;
     padding: 16px 50px;
-    
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #0a9c11;
+    border-radius: 10px;
+    transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #068051;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 50px 12px 50px;
+    user-select: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: url("images/Screenshot 2025-09-10 233919.png");
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url("images/checck.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ✅ FIXED CUT SYMBOL */
+ul li span {
+    position: absolute;
+    right: 10px; /* small padding from edge */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    color: #ff5555;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2; /* ensure it stays above pseudo-element */
+}
+
+ul li span:hover {
+    background: #f3f3f3;
 }
