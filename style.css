@@ -85,8 +85,8 @@ ul li {
 ul li::before {
     content: '';
     position: absolute;
-    height: 28px;
-    width: 28px;
+    height: 29px;
+    width: 29px;
     border-radius: 50%;
     background: url("images/Screenshot 2025-09-10 233919.png");
     background-size: cover;
